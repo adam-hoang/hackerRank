@@ -265,3 +265,85 @@
 //     return count;
 // }
 // console.log(beautifulDays(20,23,6));
+
+// function viralAdvertising(n) {
+//     var people = 5;
+//     var sum = 0;
+//     for (var i=0; i<n; i++){
+//         people = Math.floor(people/2);
+//         sum += people
+//         people *= 3;
+//     }
+//     return sum;
+// }
+// console.log(viralAdvertising(3));
+// console.log(viralAdvertising(4));
+
+// function saveThePrisoner(n, m, s) {
+//     // sneaky way since 0 is false
+//     // return (m-1 + s)%n || n;
+
+//     var position = (m+s-1)%n
+//     if (position == 0){
+//         return n;
+//     }
+//     return position;
+// }
+// console.log(saveThePrisoner(5,2,1));
+// console.log(saveThePrisoner(5,2,2));
+// console.log(saveThePrisoner(7,19,2));
+// console.log(saveThePrisoner(3,7,3));
+
+// function circularArrayRotation(a, k, queries) {
+//     k=k%a.length;
+//     for (var i=0; i<k; i++){
+//         a.unshift(a.pop());
+//     }
+//     var results=[];
+//     for (var j=0; j<queries.length; j++){
+//         results.push(a[queries[j]]);
+//     }
+//     return results;
+// }
+// console.log(circularArrayRotation([1,2,3],2,[0,1,2]));
+// console.log(circularArrayRotation([1,2,3],4,[0,1,2]));
+
+// function permutationEquation(p) {
+//     var arr = []
+//     // indexOf returns index of p where it is found so we need to add 1
+//     // since our p starts at 2 and not 0
+//     for (let i = 1; i <= p.length; i++) {
+//         arr.push(p.indexOf(p.indexOf(i) + 1) + 1)
+//     }
+//     return arr
+// }
+// console.log(permutationEquation([2,3,1]));
+// console.log(permutationEquation([4,3,5,1,2]));
+
+// function jumpingOnClouds(c, k) {
+//     var energy = 100;
+//     for (var i=0; i<c.length ; i+=k){
+//         if(c[i] == 1){
+//             energy -= 3;
+//         }
+//         else{
+//             energy--;
+//         }
+//     }
+//     return energy;
+// }
+// console.log(jumpingOnClouds([0,0,1,0,0,1,1,0],2));
+// console.log(jumpingOnClouds([1,1,1,0,1,1,0,0,0,0],3))
+
+// function findDigits(n) {
+//     var count = 0;
+//     var n = String(n);
+//     for (var i=0; i<n.length; i++){
+//         if (n % parseInt(n[i]) == 0){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(findDigits(12));
+// console.log(findDigits(1012));
