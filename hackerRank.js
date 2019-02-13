@@ -206,3 +206,62 @@
 // }
 // console.log(hurdleRace(4,[1,6,3,5,2]));
 
+// function designerPDFViewer(h, word){
+//     var dict = {};
+//     var alpha = "abcdefghijklmnopqrstuvwxyz";
+//     for (var i=0; i<h.length; i++){
+//         dict[alpha[i]] = h[i]; 
+//     }
+//     var max = 0;
+//     for (var i=0; i<word.length; i++){
+//         if (dict[word[i]] > max){
+//             max = dict[word[i]]
+//         }
+//     }
+//     return max*word.length;
+// }
+// console.log(designerPDFViewer([1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"abc"));
+// console.log(designerPDFViewer([1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7],"zaba"));
+
+// function utopianTree(n) {
+//     var height = 1;
+//     for (var i=0; i<n; i++){
+//         if (i % 2 == 1){
+//             height += 1;
+//         }
+//         else {
+//             height *= 2;
+//         }
+//     }
+//     return height;
+// }
+// console.log(utopianTree(0));
+// console.log(utopianTree(1));
+// console.log(utopianTree(4));
+
+// function angryProfessor(k, a) {
+//     var count = 0;
+//     for (var i=0; i<a.length; i++){
+//         if (a[i] <= 0){
+//             count++;
+//         }
+//     }
+//     if (count >= k){
+//         return "NO";
+//     }
+//     return "YES";
+// }
+// console.log(angryProfessor(3,[-1,-3,4,2]));
+// console.log(angryProfessor(2,[0,-1,2,1]));
+
+// function beautifulDays(i, j, k) {
+//     var count = 0;
+//     for (var i = i; i<=j; i++){
+//         var reverse = String(i).split("").reverse().join("");
+//         if (Math.abs(i-reverse) % k == 0){
+//             count++
+//         }
+//     }
+//     return count;
+// }
+// console.log(beautifulDays(20,23,6));
