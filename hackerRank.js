@@ -347,3 +347,139 @@
 // }
 // console.log(findDigits(12));
 // console.log(findDigits(1012));
+
+// function appendAndDelete(s, t, k) {
+//     var count = 0;
+//     for (var i=0; i<Math.min(s.length,t.length); i++){
+//         if (s[i] == t[i]){
+//             count++;
+//         }
+//         else {
+//             break;
+//         }
+//     }
+//     if ((s.length+t.length-2*count)>k){
+//         return "No";
+//     }
+//     else if ((s.length+t.length-2*count)%2 == k%2){
+//         return "Yes";
+//     }
+//     else if ((s.length+t.length)<k){
+//         return "Yes";
+//     }
+//     else {
+//         return "No"
+//     }
+// }
+// console.log(appendAndDelete("hackerhappy", "hackerrank", 9));
+// console.log(appendAndDelete("aba", "aba", 7));
+// console.log(appendAndDelete("ashley", "ash", 2));
+
+// // times out
+// function squares(a, b) {
+//     var count = 0;
+//     for (var i=a; i<=b; i++){
+//         var sqrt = Math.sqrt(i);
+//         if (Number.isInteger(sqrt)){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(squares(3,9));
+
+// function squares(a, b) {
+//     var start = Math.floor(Math.sqrt(a));
+//     var end = Math.floor(Math.sqrt(b));
+//     var length = end - start;
+//     if (Number.isInteger(Math.sqrt(a))){
+//         length++
+//     }
+//     return length;
+// }
+// console.log(squares(3,9));
+// console.log(squares(17,24));
+// console.log(squares(35,70));
+// console.log(squares(100,1000));
+
+// function libraryFine(d1, m1, y1, d2, m2, y2) {
+//     if (y2<y1){
+//         return 10000;
+//     }
+//     else if (m2<m1 && y2==y1){
+//         return (m1-m2)*500;
+//     }
+//     else if (d2<d1 && m2==m1 && y2==y1) {
+//         return (d1-d2)*15;
+//     }
+//     else {
+//         return 0;
+//     }
+// }
+// console.log(libraryFine(9, 6, 2015, 6, 6, 2015))
+
+// function libraryFine(d1, m1, y1, d2, m2, y2) {
+//     if (y2<y1){
+//         return 10000;
+//     }
+//     if (y2==y1){
+//         if (m2<m1){
+//             return (m1-m2)*500;
+//         }
+//         if (m2==m1 && d2<d1){
+//             return (d1-d2)*15;
+//         }
+//     }
+//     return 0;
+// }
+// console.log(libraryFine(9, 6, 2015, 6, 6, 2015))
+
+// function cutTheSticks(arr) {
+//     var lengths =[];
+//     for (var k=0; k<=arr.length; k++){
+//         lengths.push(arr.length);
+//         var min = arr[0];
+//         for (var i=0; i<arr.length; i++){
+//             if (arr[i]<min){
+//                 min = arr[i];
+//             }
+//         }
+//         var temp = [];
+//         for (var j=0; j<arr.length; j++){
+//             arr[j] = arr[j]-min;
+//             if (arr[j] > 0){
+//                 temp.push(arr[j]);
+//             }
+//         }
+//         arr = temp;
+//         console.log(arr)
+//     }
+//     lengths.push(1)
+//     return lengths;
+// }
+// console.log(cutTheSticks([5, 4, 4, 2, 2, 8]));
+// console.log(cutTheSticks([1,2,3,4,3,3,2,1]));
+
+function cutTheSticks(arr) {
+    var lengths =[];
+    while (arr.length>0){
+        lengths.push(arr.length);
+        var min = arr[0];
+        for (var i=0; i<arr.length; i++){
+            if (arr[i]<min){
+                min = arr[i];
+            }
+        }
+        var temp = [];
+        for (var j=0; j<arr.length; j++){
+            arr[j] = arr[j]-min;
+            if (arr[j] > 0){
+                temp.push(arr[j]);
+            }
+        }
+        arr = temp;
+    }
+    return lengths;
+}
+console.log(cutTheSticks([5, 4, 4, 2, 2, 8]));
+// console.log(cutTheSticks([1,2,3,4,3,3,2,1]));
