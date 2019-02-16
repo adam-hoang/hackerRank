@@ -460,26 +460,26 @@
 // console.log(cutTheSticks([5, 4, 4, 2, 2, 8]));
 // console.log(cutTheSticks([1,2,3,4,3,3,2,1]));
 
-function cutTheSticks(arr) {
-    var lengths =[];
-    while (arr.length>0){
-        lengths.push(arr.length);
-        var min = arr[0];
-        for (var i=0; i<arr.length; i++){
-            if (arr[i]<min){
-                min = arr[i];
-            }
-        }
-        var temp = [];
-        for (var j=0; j<arr.length; j++){
-            arr[j] = arr[j]-min;
-            if (arr[j] > 0){
-                temp.push(arr[j]);
-            }
-        }
-        arr = temp;
-    }
-    return lengths;
-}
-console.log(cutTheSticks([5, 4, 4, 2, 2, 8]));
+// function cutTheSticks(arr) {
+//     var lengths =[];
+//     while (arr.length>0){
+//         lengths.push(arr.length);
+//         var min = arr[0];
+//         for (var i=0; i<arr.length; i++){
+//             if (arr[i]<min){
+//                 min = arr[i];
+//             }
+//         }
+//         var temp = [];
+//         for (var j=0; j<arr.length; j++){
+//             arr[j] = arr[j]-min;
+//             if (arr[j] > 0){
+//                 temp.push(arr[j]);
+//             }
+//         }
+//         arr = temp;
+//     }
+//     return lengths;
+// }
+// console.log(cutTheSticks([5, 4, 4, 2, 2, 8]));
 // console.log(cutTheSticks([1,2,3,4,3,3,2,1]));
