@@ -483,3 +483,36 @@
 // }
 // console.log(cutTheSticks([5, 4, 4, 2, 2, 8]));
 // console.log(cutTheSticks([1,2,3,4,3,3,2,1]));
+
+// function repeatedString(s, n) {
+//     var count=0;
+//     for (var i=0; i<s.length; i++){
+//         if (s[i] == "a"){
+//             count++
+//         }
+//     }
+//     var repeated = Math.floor(n/s.length);
+//     count *= repeated;
+//     var remainder = n % s.length;
+//     for (var i=0; i<remainder; i++){
+//         if (s[i] == "a"){
+//             count++
+//         }
+//     }
+//     return count;
+// }
+// console.log(repeatedString("aba", 10));
+// console.log(repeatedString("a", 1000000000000));
+
+// function jumpingOnClouds(c) {
+//     var count=0;
+//     for (var i=0; i<c.length-1; i++){
+//         if (c[i+2] != null && c[i+2] != 1){
+//             i++;
+//         }
+//         count++;
+//     }
+//     return count;
+// }
+// console.log(jumpingOnClouds([0,0,1,0,0,1,0]))
+// console.log(jumpingOnClouds([0,0,0,0,1,0]))
