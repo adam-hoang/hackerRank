@@ -591,3 +591,38 @@
 // console.log(taumBday(7,7,4,2,1));
 // console.log(taumBday(3,3,1,9,2));
 
+// Python solutiom
+// def taumBday(b, w, bc, wc, z):
+//     total = b * bc + w * wc
+//     if bc < wc:
+//         if (bc+z) >= wc:
+//             return total;
+//         total = b * bc + w * (bc+z)
+//         return total;
+//     elif bc > wc:
+//         if (wc+z) >= bc:
+//             return total
+//         total = w*wc + b*(wc+z)
+//         return total
+//     return total
+
+// function kaprekarNumbers(p, q) {
+//     var stringAnswer = ""
+//     var check = false;
+//     for (var i = p; i <= q; i++) {
+//         var string = (i * i).toString();
+//         var r = string.substring(string.length - i.toString().length);
+//         var l = string.substring(0, string.length - i.toString().length)
+//         if (i == parseInt(r) + parseInt(l) || i == 1) {
+//             stringAnswer += i + " "
+//             check = true;
+//         }
+
+//     }
+//     if (check == true) {
+//         console.log(stringAnswer);
+
+//     } else {
+//         console.log("INVALID RANGE")
+//     }
+// }
