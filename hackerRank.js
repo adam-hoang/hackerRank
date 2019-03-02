@@ -539,3 +539,55 @@
 //     return count;
 // }
 // console.log(equalizeArray([3,3,2,1,3]));
+
+// function acmTeam(topic) {
+//     var max = 0;
+//     var teams = 0;
+//     for (var i=0; i<topic.length-1; i++) {
+//         for (var j=i+1; j<topic.length; j++) {
+//             var count = 0;
+//             for (var k=0; k<topic[i].length; k++){
+//                 if (topic[i][k] == 1 || topic[j][k] == 1) {
+//                     count++;
+//                 }
+//             }
+//             if (count > max) {
+//                 max = count;
+//                 teams = 1
+//             }
+//             else if (count == max) {
+//                 teams++;
+//             }
+//         }
+//     }
+//     var results =[max, teams];
+//     return results;
+// }
+// acmTeam(["10101", "11100", "11010", "00101"]);
+
+
+// // breaks on larg numbers in JS
+// function taumBday(b, w, bc, wc, z) {
+//     var total = b*bc + w*wc;
+//     if ( bc < wc ) {
+//         if ( (bc + z) >= wc ) {
+//             return total;
+//         }
+//         total = b*(bc) + w*(bc+z);
+//         return total;
+//     }
+//     else if ( bc > wc ) {
+//         if ( (wc + z) >= bc ) {
+//             return total;
+//         }
+//         total = w*(wc) + b*(wc+z)
+//         return total;
+//     }
+//     return total;
+// }
+// console.log(taumBday(10,10,1,1,1));
+// console.log(taumBday(5,9,2,3,4));
+// console.log(taumBday(3,6,9,1,1));
+// console.log(taumBday(7,7,4,2,1));
+// console.log(taumBday(3,3,1,9,2));
+
