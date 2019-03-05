@@ -626,3 +626,20 @@
 //         console.log("INVALID RANGE")
 //     }
 // }
+
+function beautifulTriplets(d, arr) {
+    var count = 0;
+    for (var i=0; i<arr.length-2; i++) {
+        for (var j=i+1; j<arr.length-1; j++) {
+            if ((arr[i] + d) == arr[j]) {
+                for (var k=j+1; k<arr.length; k++) {
+                    if ((arr[j] + d) == arr[k]) {
+                        count++
+                    }
+                }
+            }
+        }
+    }
+    return count;
+}
+console.log(beautifulTriplets(3, [1,2,4,5,7,8,10]));
