@@ -627,19 +627,77 @@
 //     }
 // }
 
-function beautifulTriplets(d, arr) {
-    var count = 0;
-    for (var i=0; i<arr.length-2; i++) {
-        for (var j=i+1; j<arr.length-1; j++) {
-            if ((arr[i] + d) == arr[j]) {
-                for (var k=j+1; k<arr.length; k++) {
-                    if ((arr[j] + d) == arr[k]) {
-                        count++
-                    }
-                }
-            }
-        }
+// function beautifulTriplets(d, arr) {
+//     var count = 0;
+//     for (var i=0; i<arr.length-2; i++) {
+//         for (var j=i+1; j<arr.length-1; j++) {
+//             if ((arr[i] + d) == arr[j]) {
+//                 for (var k=j+1; k<arr.length; k++) {
+//                     if ((arr[j] + d) == arr[k]) {
+//                         count++
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     return count;
+// }
+// console.log(beautifulTriplets(3, [1,2,4,5,7,8,10]));
+
+// function minimumDistances(a) {
+//     var min = Infinity;
+//     for (var i=0; i<a.length-1; i++) {
+//         for (var j=i+1; j<a.length; j++) {
+//             if (a[i] == a[j] && (j-i)<min) {
+//                 min = j-i
+//             }
+//         }
+//     }
+//     if (min == Infinity) {
+//         min = -1;
+//     }
+//     return min
+// }
+// console.log(minimumDistances([7,1,3,4,1,7]));
+
+// function howManyGames(p, d, m, s) {
+//     var count = 0;
+//     while (s >= p){
+//         s -= p;
+//         p = Math.max(p-d, m);
+//         count++;
+//     }
+//     return count;
+// }
+
+// console.log(howManyGames(20,3,6,85));
+
+// function howManyGames(p, d, m, s) {
+//     var count = 0;
+//     while (s >= p){
+//         s -= p;
+        
+//         if (p-d >= m){
+//             p = p-d;
+//         } else {
+//             p = m
+//         }
+//         count++;
+//     }
+//     return count;
+// }
+
+// console.log(howManyGames(20,3,6,85));
+
+function chocolateFeast(n, c, m) {
+    var bought = Math.floor(n/c);
+    var eaten = bought;
+    while (bought/m >= 1) {
+        var wrapper = Math.floor(bought/m);
+        eaten += wrapper;
+        bought = wrapper + (bought%m);
     }
-    return count;
+    return eaten
 }
-console.log(beautifulTriplets(3, [1,2,4,5,7,8,10]));
+
+console.log(chocolateFeast(10,2,5));
