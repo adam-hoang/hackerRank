@@ -686,18 +686,90 @@
 //     }
 //     return count;
 // }
-
 // console.log(howManyGames(20,3,6,85));
 
-function chocolateFeast(n, c, m) {
-    var bought = Math.floor(n/c);
-    var eaten = bought;
-    while (bought/m >= 1) {
-        var wrapper = Math.floor(bought/m);
-        eaten += wrapper;
-        bought = wrapper + (bought%m);
-    }
-    return eaten
-}
+// function chocolateFeast(n, c, m) {
+//     var bought = Math.floor(n/c);
+//     var eaten = bought;
+//     while (bought/m >= 1) {
+//         var wrapper = Math.floor(bought/m);
+//         eaten += wrapper;
+//         bought = wrapper + (bought%m);
+//     }
+//     return eaten
+// }
+// console.log(chocolateFeast(10,2,5));
 
-console.log(chocolateFeast(10,2,5));
+// function maxStreak(arr,m) {
+//     let max = 0;
+//     let count = 0;
+//     for (let i=0; i<arr.length; i++) {
+//         for (let j=0; j<m; j++) {
+//             if (arr[i][j] === "N") {
+//                 count = 0;
+//                 break;
+//             }
+//             if (j === m-1) {
+//                 count++;
+//             }
+//         }
+//         max = Math.max(count, max)
+//     }
+//     return max;
+// }
+// console.log(maxStreak(["YYY", "YYY", "YNN", "YYN", "YYN"], 3));
+// console.log(maxStreak(["YYY", "YYY", "YYY", "YYN", "YYY"], 3));
+// console.log(maxStreak(["YYN", "YYN", "YNY", "YYN", "YYN"], 3));
+
+// var combinationSum3 = function (k, n, maxHours) {
+//     var solution = [];
+//     var result = [];
+//     var backTracking = function (m, n) {
+//         if (m == k) {
+//             var sum = 0;
+//             for (var i = 0; i < solution.length; i++) {
+//                 sum += solution[i];
+//             }
+//             if (sum == n) {
+//                 result.push(solution.slice(0));
+//             }
+//         } else {
+//             for (var i = 0; i <= maxHours; i++) {
+//                 solution[m] = i;
+//                 arguments.callee(m + 1, n);
+//             }
+//         }
+//     }
+//     backTracking(0, n);
+//     return result;
+// };
+// function workSchedule(str, h, m) {
+//     let count = 0;
+//     let hourSet = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === "?") {
+//             count++;
+//         } else {
+//             hourSet += parseInt(str[i]);
+//         }
+//     }
+//     let neededHours = h - hourSet
+//     let result = combinationSum3(count, neededHours, m);
+//     for (let i=0; i < result.length; i++) {
+//         counter = 0;
+//         let newSchedule = "";
+//         for (let j=0; j<str.length; j++) {
+//             if (str[j] === "?") {
+//                 newSchedule += result[i][counter];
+//                 counter++;
+//             } else {
+//                 newSchedule += str[j];
+//             }
+//         }
+//         console.log(newSchedule)
+//     }
+// }
+// let str = "08??840";
+// let hours = 24;
+// let maxHours = 4;
+// workSchedule(str, hours, maxHours);
